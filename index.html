@@ -16,12 +16,6 @@
       justify-content: space-between;
     }
 
-    #reset-btn {
-      color: black;
-      background-color: rgba(0,0,0,0.1);
-      border-radius: 2px;
-    }
-
     .good {
       background-color: green;
       color: white;
@@ -40,37 +34,21 @@
 
 <body>
   <div id="jp-heading">
-    <h2>Anchor Information</h2>
-    <button id="reset-btn">Reset Missed Frames Counter</button>
+    <h2>Token Information</h2>
     <input type="file" id="config-file" accept="application/json" style="display: none;" />
   </div>
   <table id="sensor-data" class="display compact">
     <thead>
       <tr>
-        <th>Anchor ID</th>
-        <th>Anchor (Dec)</th>
-        <th>Building</th>
-        <th>Floor</th>
-        <th>Zone</th>
-        <th>Gateway ID</th>
-        <th>Connected Gateways</th>
-        <th>Token Count</th>
+        <th>Token ID</th>
+        <th>Token (Dec)</th>
+        <th>Role</th>
+        <th>Subcontractor</th>
+        <th>Work Category</th>
+        <th>Work Subcategory</th>
+        <th>Last Anchor ID</th>
+        <th>Last Anchor (Dec)</th>
         <th>Timestamp</th>
-        <th>Battery</th>
-        <th>Temp (Anchor)</th>
-        <th>Temp (Environment)</th>
-        <th>Humidity</th>
-        <!--<th>Pressure</th>
-        <th>VOC</th>
-        <th>Altitude</th>-->
-        <th>GW RSSI</th>
-        <th>GW SNR</th>
-        <th>Frame Count</th>
-        <th>Missed Frames</th>
-        <th>SF</th>
-        <th>Msg Typ</th>
-        <!--<th>Wake Up Code</th>
-        <th>Motion Detected</th>-->
       </tr>
     </thead>
     <tbody>
@@ -78,8 +56,6 @@
   </table>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
