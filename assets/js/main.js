@@ -86,12 +86,15 @@
         {
           "data": null,
           "render": function(data, type, row) {
-            var hexId = row.lastanchor.anchorid;
-            // Extract the hexadecimal part of the tpid
-            var hex = hexId.split("-")[1];
-            // Convert the hexadecimal to decimal and adjust for TM numbering methodology subtracting d000 or 53248.
-            var decimal = parseInt(hex, 16) - 53248;
-            return decimal;
+            if (row.lastanchor && row.lastanchor.anchorid) {
+              var hexId = row.lastanchor.anchorid;
+              // Extract the hexadecimal part of the tpid
+              var hex = hexId.split("-")[1];
+              // Convert the hexadecimal to decimal and adjust for TM numbering methodology subtracting d000 or 53248.
+              var decimal = parseInt(hex, 16) - 53248;
+              return decimal;
+            }
+            return '';
           }
         },
         {
