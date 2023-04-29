@@ -183,7 +183,7 @@
         var now = moment();
         var tokenTime = moment($('td:eq(8)', row).text());
         var diffInMilliseconds = now.diff(tokenTime);
-        if (anchorTime !== '') {
+        if (tokenTime !== '') {
           if (diffInMilliseconds > 2 * 60 * 60 * 1000) {
             $('td:eq(8)', row).addClass('poor');
           } else if (diffInMilliseconds > 1 * 60 * 60 * 1000) {
