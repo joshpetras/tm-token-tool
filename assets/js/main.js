@@ -187,9 +187,9 @@
         var tokenTime = moment($('td:eq(8)', row).text());
         var diffInMilliseconds = now.diff(tokenTime);
         if (tokenTime !== '') {
-          if (diffInMilliseconds > 2 * 60 * 60 * 1000) {
-            $('td:eq(8)', row).addClass('poor');
-          } else if (diffInMilliseconds > 1 * 60 * 60 * 1000) {
+          if (diffInMilliseconds < 1 * 60 * 60 * 1000) {
+            $('td:eq(8)', row).addClass('good');
+          } else if (diffInMilliseconds < 2 * 60 * 60 * 1000) {
             $('td:eq(8)', row).addClass('warning');
           }
         }
