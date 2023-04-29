@@ -78,9 +78,9 @@
           }
         },
         {
-          "data": "lastanchor",
+          "data": null,
           "render": function(data, type, row) {
-            return (data && data.anchorid) ? data.anchorid : '';
+            return (row.lastanchor && row.lastanchor.anchorid) ? row.lastanchor.anchorid : '';
           }
         },
         {
