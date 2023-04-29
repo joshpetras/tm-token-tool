@@ -210,10 +210,10 @@
 
     function saveSearchBuilderFilters() {
       var currentSearchBuilderData = JSON.stringify(table.searchBuilder.getDetails());
-      var storedSearchBuilderData = localStorage.getItem('searchBuilderData');
+      var storedSearchBuilderData = localStorage.getItem('tokenSearchBuilderData');
 
       if (currentSearchBuilderData !== storedSearchBuilderData) {
-        localStorage.setItem('searchBuilderData', currentSearchBuilderData);
+        localStorage.setItem('tokenSearchBuilderData', currentSearchBuilderData);
         console.log('SearchBuilder filters saved:', currentSearchBuilderData);
       }
     }
@@ -232,7 +232,7 @@
     }
 
     function loadSearchBuilderFilters() {
-      var searchBuilderData = localStorage.getItem('searchBuilderData');
+      var searchBuilderData = localStorage.getItem('tokenSearchBuilderData');
       if (searchBuilderData) {
         try {
           searchBuilderData = JSON.parse(searchBuilderData);
