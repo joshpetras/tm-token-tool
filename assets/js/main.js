@@ -54,27 +54,27 @@
           }
         },
         {
-          "data": "tokenInfo",
+          "data": null,
           "render": function(data, type, row) {
-            return (data && data.role) ? data.role : '';
+            return (row.tokenInfo && row.tokenInfo.role) ? row.tokenInfo.role : '';
           }
         },
         {
-          "data": "tokenInfo",
+          "data": null,
           "render": function(data, type, row) {
-            return (data && data.subcontractor) ? data.subcontractor : '';
+            return (row.tokenInfo && row.tokenInfo.subcontractor) ? row.tokenInfo.subcontractor : '';
           }
         },
         {
-          "data": "tokenInfo",
+          "data": null,
           "render": function(data, type, row) {
-            return (data && data.categorywork) ? data.categorywork : '';
+            return (row.tokenInfo && row.tokenInfo.categorywork) ? row.tokenInfo.categorywork : '';
           }
         },
         {
-          "data": "tokenInfo",
+          "data": null,
           "render": function(data, type, row) {
-            return (data && data.subcategorywork) ? data.subcategorywork : '';
+            return (row.tokenInfo && row.tokenInfo.subcategorywork) ? row.tokenInfo.subcategorywork : '';
           }
         },
         {
