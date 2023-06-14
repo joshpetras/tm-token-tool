@@ -98,6 +98,12 @@
           }
         },
         {
+          "data": null,
+          "render": function(data, type, row) {
+            return (row.sensors && row.sensors.bat) ? row.sensors.bat.value : '';
+          }
+        },
+        {
           "data": "time",
           "render": function(data, type, row) {
             if (type === 'display' || type === 'filter') {
@@ -143,8 +149,12 @@
           "targets": 7
         },
         {
+          "title": "Battery",
+          "targets": 8
+        },
+        {
           "title": "Time",
-          "targets": 8,
+          "targets": 9,
           "searchBuilderType": "moment-YYYY-MM-DD HH:mm:ss"
         }
       ],
@@ -184,13 +194,13 @@
       // Apply good, warning, and poor colors to Time.
       "createdRow": function(row, data, dataIndex) {
         var now = moment();
-        var tokenTime = moment($('td:eq(8)', row).text());
+        var tokenTime = moment($('td:eq(9)', row).text());
         var diffInMilliseconds = now.diff(tokenTime);
         if (tokenTime !== '') {
           if (diffInMilliseconds < 1 * 60 * 60 * 1000) {
-            $('td:eq(8)', row).addClass('good');
+            $('td:eq(9)', row).addClass('good');
           } else if (diffInMilliseconds < 2 * 60 * 60 * 1000) {
-            $('td:eq(8)', row).addClass('warning');
+            $('td:eq(9)', row).addClass('warning');
           }
         }
       }
