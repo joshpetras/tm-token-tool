@@ -101,6 +101,15 @@
           "data": null,
           "render": function(data, type, row) {
             return (row.sensors && row.sensors.bat) ? row.sensors.bat.value : '';
+          },
+          "createdCell": function(cell, cellData, rowData) {
+            if (rowData.sensors && rowData.sensors.bat && rowData.sensors.bat.time){
+              var batDate = new Date(rowData.sensors.bat.time * 1000); // Convert timestamp to Date object
+              var batDateString = moment(batDate).startOf('second').fromNow(); // Use moment.js to format the date string
+              tippy(cell, {
+                content: batDateString,
+              });
+            }
           }
         },
         {
