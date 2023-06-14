@@ -205,6 +205,14 @@
         var now = moment();
         var tokenTime = moment($('td:eq(9)', row).text());
         var diffInMilliseconds = now.diff(tokenTime);
+        var batteryValue = $('td:eq(8)', row).text();
+        if (batteryValue !== '') {
+          if (batteryValue < 2.2) {
+            $('td:eq(8)', row).addClass('poor');
+          } else if (batteryValue < 2.6) {
+            $('td:eq(8)', row).addClass('warning');
+          }
+        }
         if (tokenTime !== '') {
           if (diffInMilliseconds < 1 * 60 * 60 * 1000) {
             $('td:eq(9)', row).addClass('good');
