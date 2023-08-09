@@ -1,7 +1,11 @@
 
-  function reloadTableData() {
-    $('#sensor-data').DataTable().ajax.reload(null, false);
-  }
+function reloadTableData() {
+    document.getElementById("endpoint-selector").blur();  // Force collapse of the dropdown
+    document.getElementById("endpoint-selector").disabled = true;  // Disable dropdown
+    $('#sensor-data').DataTable().ajax.reload(function() {
+        document.getElementById("endpoint-selector").disabled = false;  // Re-enable dropdown
+    }, false);
+}
 
   $(document).ready(function() {
     console.log('Document ready');
