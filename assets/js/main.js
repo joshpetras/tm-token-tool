@@ -217,7 +217,7 @@ function reloadTableData() {
       },
       "buttons": [
         'copy',
-        'excel',
+        'csv',
         {
           extend: 'pdf',
           orientation: 'landscape',
