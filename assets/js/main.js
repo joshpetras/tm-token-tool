@@ -246,7 +246,7 @@ function reloadTableData() {
         if (batteryValue !== '') {
           if (batteryValue < 2.2) {
             $('td:eq(8)', row).addClass('poor');
-          } else if (batteryValue < 2.6) {
+          } else if (batteryValue < 2.5) {
             $('td:eq(8)', row).addClass('warning');
           }
         }
