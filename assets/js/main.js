@@ -36,7 +36,7 @@ function reloadTableData() {
 
         // Update the DataTable's AJAX source with increased timeout
         table.ajax.url(apiEndpoint).load(null, false, {
-            timeout: 15000  // 10 seconds
+            timeout: 15000  // 15 seconds
         });
 
         // Save the selected endpoint to localStorage
@@ -55,7 +55,7 @@ function reloadTableData() {
         "url": apiEndpoint,
         "dataSrc": "tokens",
         "cache": false,
-        "timeout": 15000, // Set timeout to 10 seconds
+        "timeout": 15000, // Set timeout to 15 seconds
         "beforeSend": function() {
           // Update the page title before sending the request
           document.querySelector('h2').innerText = 'Token information from ' + apiEndpoint + ' - Connected since ' + dateString;
