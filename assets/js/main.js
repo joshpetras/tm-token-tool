@@ -43,7 +43,7 @@ function reloadTableData() {
         localStorage.setItem("selectedTokenApiEndpoint", apiEndpoint);
 
         // Restart the interval after the data is loaded
-        intervalId = setInterval(reloadTableData, 10000);
+        intervalId = setInterval(reloadTableData, 15000);
     });
 
     // Get the current date and time when the query is initiated
@@ -330,6 +330,6 @@ function reloadTableData() {
       reader.readAsText(file);
     }
 
-    // Reload data every 10 seconds
-    var intervalId = setInterval(reloadTableData, 10000);  // Keep a reference to the interval
+    // Reload data every 15 seconds
+    var intervalId = setInterval(reloadTableData, 15000);  // Keep a reference to the interval
   });
